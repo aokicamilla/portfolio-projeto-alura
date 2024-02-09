@@ -1,0 +1,145 @@
+:root {
+  --main-backgroud-color: #161A30;
+  --text--color: #F6f6f6;
+  --strong--color: #F5E8C7;
+  --header-backgroun-color: #435585;
+  --hover-link-color: #31304D;
+  --footer-text-color: #797979;
+
+  --main-font: 'Lato', sans-serif;
+}
+
+* {
+  font-family: var(--main-font);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* height: 100vh; */
+  background-color: var(--main-backgroud-color);
+  box-sizing: border-box;
+  color: var(--text--color);
+  width: 100%
+}
+
+.header__menu{
+  position: fixed;
+  display: flex;
+  width: 100%;
+  background-color: var(--header-backgroun-color);
+  padding: 1%;
+}
+
+.header__menu__link {
+  margin-left: 3rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text--color);
+  font-family: var(--second-font);
+}
+
+.presentation {
+  padding: 8% 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem
+}
+
+.presentation__content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap:2.5rem;
+}
+
+.presentation__content__title {
+  font-size: 2.25rem;
+}
+
+strong {
+  color:var(--strong--color);
+}
+
+.presentation__image {
+  width: 40%;
+}
+
+.presentation__links {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.presentation__links__subtitle{
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.presentation__links__button {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  border: 2px solid var(--strong--color);
+  width: 50%;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1.2rem 0;
+  text-decoration: none;
+  color: var(--text--color);
+}
+
+.presentation__links__button img {
+  width: 2rem;
+}
+
+.presentation__links__button:hover {
+  background-color: var(--hover-link-color);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.6rem;
+  color: var(--footer-text-color);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+
+  .header__menu {
+    justify-content: center;
+  }
+
+  .presentation {
+    flex-direction: column-reverse;
+    padding: 0 5% 5% 5%;
+  }
+
+  .presentation__image {
+    min-width: 2rem;
+    margin: 5rem 0 0 0;
+  }
+
+  .presentation__content {
+    width: auto;
+  }
+
+  .presentation__links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .presentation__links__button {
+    min-width: 11rem;
+  }
+
+
+
+}
